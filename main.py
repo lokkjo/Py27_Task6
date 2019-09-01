@@ -64,6 +64,8 @@ goat_kopyta = Goat('Копыта', 121.0)
 
 duck_krjakva = Duck('Кряква', 5.2)
 
+# Проверка взаимодействия с объектами
+
 def feed_animals():
     geese_seryi.feed()
     geese_belyi.feed()
@@ -123,16 +125,26 @@ def uncle_joe_evening_procedure():
 
 def weight_comparison():
     weight_dict = {
-        geese_seryi.name: geese_seryi.weight,
-        geese_belyi.name: geese_belyi.weight,
-        cow_manjka.name: cow_manjka.weight,
-        sheep_barashek.name: sheep_barashek.weight,
-        sheep_kudrjavyi.name: sheep_kudrjavyi.weight,
-        hen_koko.name: hen_koko.weight,
-        hen_kukareku.name: hen_kukareku.weight,
-        goat_roga.name: goat_roga.weight,
-        goat_kopyta.name: goat_kopyta.weight,
-        duck_krjakva.name: duck_krjakva.weight,
+        f'{geese_seryi.family} {geese_seryi.name}':
+            geese_seryi.weight,
+        f'{geese_belyi.family} {geese_belyi.name}':
+            geese_belyi.weight,
+        f'{cow_manjka.family} {cow_manjka.name}':
+            cow_manjka.weight,
+        f'{sheep_barashek.family} {sheep_barashek.name}':
+            sheep_barashek.weight,
+        f'{sheep_kudrjavyi.family} {sheep_kudrjavyi.name}':
+            sheep_kudrjavyi.weight,
+        f'{hen_koko.family} {hen_koko.name}':
+            hen_koko.weight,
+        f'{hen_kukareku.family} {hen_kukareku.name}':
+            hen_kukareku.weight,
+        f'{goat_roga.family} {goat_roga.name}':
+            goat_roga.weight,
+        f'{goat_kopyta.family} {goat_kopyta.name}':
+            goat_kopyta.weight,
+        f'{duck_krjakva.family} {duck_krjakva.name}':
+            duck_krjakva.weight,
     }
     names_list = list(weight_dict.keys())
     weight_list = list(weight_dict.values())
